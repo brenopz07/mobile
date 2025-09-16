@@ -4,9 +4,10 @@ import {View, Text, TextInput, TouchableOpacity, StyleSheet, Pressable} from 're
 export default function App_restaurante(){
 
     const [number, setNumber] = useState(0);
+    const [limite, setLimite] = useState(null)
 
     function add(){
-        if (number < 10){
+        if (number < limite){
         setNumber(number + 1);
         }
     }
@@ -18,6 +19,17 @@ export default function App_restaurante(){
     }
     return(
         <View style={styles.container}>
+            <View>
+                <Text>
+                    Qual o limite desejado?
+                </Text>
+                <TextInput style={styles.input}
+                keyboardType="numeric"
+                value={limite}
+                onChangeText={(texto) => setLimite(texto)}
+                >
+                </TextInput>
+            </View>
             <Text style={styles.texto}>
                 Pessoas no restaurente:
             </Text>
@@ -94,5 +106,10 @@ const styles = StyleSheet.create({
         backgroundColor:'yellow',
         padding:10,
         borderRadius:10,
+    },
+    input:{
+        marginBottom:30,
+        fontSize:15,
+        backgroundColor:'white'
     }
 });
