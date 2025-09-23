@@ -3,9 +3,8 @@
  */
 
 import { AppRegistry } from 'react-native';
-import App from './App';
-import App1 from './App1';
-import App2 from './App2';
+import App from './AppNavigation';
+import App1 from './AppFirebase'
 import { name as appName } from './app.json';
 
-AppRegistry.registerComponent(appName, () => App2);
+AppRegistry.registerComponent(appName, () => App1);
