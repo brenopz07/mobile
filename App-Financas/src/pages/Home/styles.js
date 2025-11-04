@@ -35,3 +35,5 @@ export const List = styled.FlatList`
   background-color: #FFF;
 `;
 
+
+
